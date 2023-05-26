@@ -1,38 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgba(182, 231, 46, 0.644);
+}
+.App h1{
+  padding-bottom: 10px;
+  color: rgb(9, 79, 160);
+  border-bottom: 2px solid rgb(9, 79, 160);
+  margin-bottom: 20px;
+}
+.chatWindow{
+  width: 60vw;
+  height: fit-content;
+  min-height: 90vh;
+  background-color: aquamarine;
+}
+.chatBox{
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+.typing{
+  position: fixed;
+  bottom: 4vh;
+  width: 60vw;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.typing input{
+  width: 100px;
+  height: 20px;
+  border: none;
+  border-bottom: 2px solid rgb(6, 77, 136);
+  background-color: inherit;
+  text-align: center;
+  font-size: 18px;
+}
+.typing textarea{
+  background-color: rgb(14, 66, 49);
   color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
 }
-
-.App-link {
-  color: #61dafb;
+.typing button{
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.incoming{
+  max-width: 200px;
+  min-width: fit-content;
+  padding: 5px;
+  height: fit-content;
+  background-color: rgb(3, 114, 114);
+  color: white;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin: 6px;
+  position: relative;
+  right: -50%;
+}
+.outgoing{
+  display: inline-block;
+  width: fit-content;
+  max-width: 300px;
+  height: fit-content;
+  padding: 10px;
+  height: fit-content;
+  background-color: rgb(31, 61, 61);
+  color: white;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin: 6px;
+  position: relative;
+  left: 6px;
+}
+.name{
+  color: rgb(199, 187, 187);
+  position: relative;
+  bottom: -8px;
+  right: -10px;
+}
+.sendIcon{
+  width: 35px;
+  height: 35px;
+  color: rgb(14, 66, 49);
+}
+.sendIcon:hover{
+  color: rgb(7, 153, 104);
 }
